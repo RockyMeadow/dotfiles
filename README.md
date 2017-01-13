@@ -1,0 +1,1 @@
+# myi3config
