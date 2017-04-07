@@ -166,7 +166,7 @@ set $purple	#8473A7
 set $red	#B58900
 set $orange	#E59847
 set $cyan	#2AA198
-set $dark #00252E
+set $dark 	#00252E
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -179,7 +179,7 @@ bar {
                 statusline	#999999
                 background	$black
 
-                # Colors            border      backgr.     text
+                # Colors            	border      	backgr.     	text
                 focused_workspace	$white	 	$white		$black
                 active_workspace	#073642 	#073642 	#696f89
                 inactive_workspace	#073642 	#073642     	$white
@@ -196,14 +196,17 @@ bindsym $mod+XF86AudioLowerVolume exec amixer -D pulse sset Master 1%- && pkill 
 #mute
 bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks
 #toggle touchpad
-bindsym XF86TouchpadToggle exec /home/rockymeadow/.i3/toggletouchpad.sh
+bindsym XF86TouchpadToggle exec /home/rockymeadow/.i3/bin/toggletouchpad.sh
+#lock screen
+bindsym $mod+Escape exec i3lock
+
 
 
 #class                  	border  backgr. text    indicator
 client.focused			$white  $white  $dark   $dark
 client.unfocused		$dark   $dark   $white  $white
-client.focused_inactive	$dark   $dark   $white  $dark
-client.urgent $orange $orange $dark $white
+client.focused_inactive		$dark   $dark   $white  $dark
+client.urgent 			$orange $orange $dark 	$white
 
 #assign work space
 assign [class="Firefox"] $workspace1
@@ -215,7 +218,7 @@ assign [class="robomongo"] 6
 
 #startup
 exec firefox
-exec atom
 exec gnome-terminal --hide-menubar
 exec ibus-daemon -r -d
+exec_always --no-startup-id feh --randomize --bg-scale /home/rockymeadow/Pictures/wallpapers
 
