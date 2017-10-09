@@ -18,7 +18,7 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
-font pango:Ubuntu, Mono 10
+font pango:System San Francisco Display 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -91,11 +91,12 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $workspace1 "1: "
+set $workspace1 "1: "
 set $workspace2 "2: "
 set $workspace3 "3: "
-set $workspace4 "4: "
+set $workspace4 "4: "
 set $workspace5 "5: "
+set $workspace8 "8: "
 set $workspace10 "10: "
 
 # switch to workspace
@@ -106,7 +107,7 @@ bindsym $mod+4 workspace $workspace4
 bindsym $mod+5 workspace $workspace5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
+bindsym $mod+8 workspace $workspace8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace $workspace10
 
@@ -118,7 +119,7 @@ bindsym $mod+Shift+4 move container to workspace $workspace4
 bindsym $mod+Shift+5 move container to workspace $workspace5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
@@ -127,7 +128,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -f 'System San Francisco Display' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -143,10 +144,10 @@ mode "resize" {
         bindsym semicolon resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -168,37 +169,39 @@ set $orange	#E59847
 set $cyan	#2AA198
 set $dark 	#00252E
 
+# Preset colors
+set $bg-color	#073642
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+        status_command i3blocks -c ~/.i3/i3blocks.conf
       	position top
-      	tray_output LVDS-1
+      	tray_output eDP-1
         colors {
                 statusline	#999999
                 background	$black
 
                 # Colors            	border      	backgr.     	text
                 focused_workspace	$white	 	$white		$black
-                active_workspace	#073642 	#073642 	#696f89
-                inactive_workspace	#073642 	#073642     	$white
+                active_workspace	$bg-color 	$bg-color 	#696f89
+                inactive_workspace	$bg-color 	$bg-color     	$white
                 urgent_workspace  	$orange		$orange		$dark
         }
 }
 
 #volume
-bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioRaiseVolume exec amixer sset Master 5%+ && pkill -SIGRTMIN+10 i3blocks
+bindsym XF86AudioLowerVolume exec amixer sset Master 5%- && pkill -SIGRTMIN+10 i3blocks
 #granular volume control
-bindsym $mod+XF86AudioRaiseVolume exec amixer -D pulse sset Master 1%+ && pkill -RTMIN+1 i3blocks
-bindsym $mod+XF86AudioLowerVolume exec amixer -D pulse sset Master 1%- && pkill -RTMIN+1 i3blocks
+bindsym $mod+XF86AudioRaiseVolume exec amixer sset Master 1%+ && pkill -SIGRTMIN+10 i3blocks
+bindsym $mod+XF86AudioLowerVolume exec amixer sset Master 1%- && pkill -SIGRTMIN+10 i3blocks
 #mute
 bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks
 #toggle touchpad
 bindsym XF86TouchpadToggle exec /home/rockymeadow/.i3/bin/toggletouchpad.sh
 #lock screen
-bindsym $mod+Escape exec i3lock
+bindsym $mod+Escape exec i3lock -u -c "$bg-color"
 
 
 
@@ -209,16 +212,17 @@ client.focused_inactive		$dark   $dark   $white  $dark
 client.urgent 			$orange $orange $dark 	$white
 
 #assign work space
-assign [class="Firefox"] $workspace1
+assign [class="Google-chrome"] $workspace1
 assign [class="Atom"] $workspace2
 assign [class="Gnome-terminal"] $workspace3
 assign [class="Mattermost"] $workspace5
-assign [class="Google-chrome"] $workspace4
+assign [class="Firefox"] $workspace4
+assign [class="Steam"] $workspace8
 assign [class="robomongo"] 6
 
 #startup
-exec firefox
+exec google-chrome-stable
 exec gnome-terminal --hide-menubar
 exec ibus-daemon -r -d
-exec_always --no-startup-id feh --randomize --bg-scale /home/rockymeadow/Pictures/wallpapers
+exec_always --no-startup-id feh --randomize --bg-scale /home/dtpham/Pictures/wallpapers
 
