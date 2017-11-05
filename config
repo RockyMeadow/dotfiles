@@ -204,7 +204,7 @@ bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks
 #toggle touchpad
 #bindsym XF86TouchpadToggle exec /home/rockymeadow/.i3/bin/toggletouchpad.sh
 #lock screen
-bindasym $mod+Escape exec i3lock -u -c "$bg-color"
+bindsym $mod+Escape exec i3lock -u -c "$bg-color"
 #screenbrightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
@@ -231,6 +231,7 @@ exec --no-startup-id google-chrome-stable
 exec --no-startup-id gnome-terminal --hide-menubar
 exec --no-startup-id ibus-daemon -r -d
 exec --no-startup-id mattermost-desktop
+exec --no-startup-id redshift
 
 exec_always --no-startup-id feh --randomize --bg-scale $home/Pictures/wallpapers
 
