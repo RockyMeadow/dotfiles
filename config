@@ -201,6 +201,10 @@ bindsym $mod+Escape exec ~/.i3/bin/lockscreen.sh
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
+# Move workspace around monitors
+bindsym $mod+Shift+comma move workspace to output left
+bindsym $mod+Shift+period move workspace to output right
+
 #class                  	border  backgr. text    indicator
 client.focused			$white  $white  $dark   $dark
 client.unfocused		$dark   $dark   $white  $white
@@ -220,7 +224,7 @@ assign [class="Spotify"] $workspace10
 
 #startup
 exec --no-startup-id ~/.i3/bin/xinput-fix.sh
-exec --no-startup-id google-chrome-stable
+exec --no-startup-id firefox-quantum
 exec --no-startup-id gnome-terminal --hide-menubar
 exec --no-startup-id ibus-daemon -r -d
 exec --no-startup-id mattermost-desktop
