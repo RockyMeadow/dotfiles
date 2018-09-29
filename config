@@ -218,13 +218,14 @@ assign [class="Atom"] $workspace3
 assign [class="Firefox"] $workspace4
 assign [class="Thunderbird"] $workspace4
 assign [class="Mattermost"] $workspace5
+assign [class="TelegramDesktop"] $workspace5
 assign [class="robomongo"] $workspace6
 assign [class="Steam"] $workspace8
 assign [class="Spotify"] $workspace10
 
 #startup
 exec --no-startup-id ~/.i3/bin/xinput-fix.sh
-exec --no-startup-id firefox-quantum
+exec --no-startup-id firefox
 exec --no-startup-id gnome-terminal --hide-menubar
 exec --no-startup-id ibus-daemon -r -d
 exec --no-startup-id mattermost-desktop
