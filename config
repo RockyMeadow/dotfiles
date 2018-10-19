@@ -205,11 +205,18 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bindsym $mod+Shift+comma move workspace to output left
 bindsym $mod+Shift+period move workspace to output right
 
-#class                  	border  backgr. text    indicator
-client.focused			$white  $white  $dark   $dark
-client.unfocused		$dark   $dark   $white  $white
-client.focused_inactive		$dark   $dark   $white  $dark
-client.urgent 			$orange $orange $dark 	$white
+# spotify navigator
+bindsym $mod+Shift+p exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+
+bindsym $mod+Shift+bracketright exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+
+bindsym $mod+Shift+bracketleft exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
+
+#Class                    border  backgr  text    indicator
+client.focused            $white  $white  $dark   $dark
+client.unfocused          $dark   $dark   $white  $white
+client.focused_inactive	  $dark   $dark   $white  $dark
+client.urgent             $orange $orange $dark 	$white
 
 #assign work space
 assign [class="Google-chrome"] $workspace1
