@@ -168,7 +168,7 @@ new_window pixel 2
 
 # Setup desk bar
 bar {
-        status_command i3blocks -c ~/.i3/i3blocks.conf
+        status_command i3blocks -c $HOME/.i3/i3blocks.conf
       	position top
       	tray_output eDP1
         colors {
@@ -204,6 +204,8 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 # Move workspace around monitors
 bindsym $mod+Shift+comma move workspace to output left
 bindsym $mod+Shift+period move workspace to output right
+bindsym $mod+comma move workspace to output up
+bindsym $mod+period move workspace to output down
 
 # spotify navigator
 bindsym $mod+Shift+p exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
