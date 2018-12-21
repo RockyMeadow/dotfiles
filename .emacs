@@ -34,6 +34,14 @@
    ("C-i" . helm-execute-persistent-action)
    ("C-z" . helm-select-action)))
 
+(use-package helm-projectile
+  :ensure t
+  :init
+  (setq projectile-completion-system 'helm)
+  (projectile-mode)
+  (define-key projectile-mode-map (kbd "C-x p") 'projectile-command-map)
+  (helm-projectile-on))
+
 ;; which-key
 (use-package which-key
   :ensure t
@@ -47,6 +55,9 @@
 (use-package anzu
   :ensure t
   :init (global-anzu-mode t))
+
+(use-package magit
+  :ensure t)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -76,7 +87,9 @@
    (quote
     ((sequence "TODO(t)" "|" "DONE(d)")
      (sequence "WAITING(w)" "|" "CANCELED(c)"))))
- '(package-selected-packages (quote (anzu doom-themes which-key use-package helm)))
+ '(package-selected-packages
+   (quote
+    (magit helm-projectile multiple-cursors anzu doom-themes which-key use-package helm)))
  '(read-quoted-char-radix 16)
  '(recentf-mode t)
  '(safe-local-variable-values
