@@ -1,6 +1,6 @@
 (require 'package)
 (add-to-list 'package-archives
-	     '("melpa" . "https://melpa.org/packages/"))
+             '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 
  ;;; bootstrap `use-package'
@@ -59,6 +59,19 @@
 (use-package magit
   :ensure t)
 
+(use-package lsp-mode
+  :ensure t
+  :config
+  (require 'lsp)
+  (require 'lsp-clients)
+  :hook
+  (js-mode . (lambda() (lsp))))
+
+(add-hook 'js-mode-hook
+          (lambda()
+            (define-key js-mode-map (kbd "M-.") 'xref-find-definitions)))
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -89,7 +102,7 @@
      (sequence "WAITING(w)" "|" "CANCELED(c)"))))
  '(package-selected-packages
    (quote
-    (magit helm-projectile multiple-cursors anzu doom-themes which-key use-package helm)))
+    (eglot lsp-mode magit helm-projectile multiple-cursors anzu doom-themes which-key use-package helm)))
  '(read-quoted-char-radix 16)
  '(recentf-mode t)
  '(safe-local-variable-values

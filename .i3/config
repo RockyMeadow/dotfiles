@@ -147,20 +147,20 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Hybrid colors
-set $black	#002B36
-set $white	#839496
-set $gray	#CCCCCC
-set $darkgray	#666666
-set $green 	#799F26
-set $blue	#4D73AA
-set $purple	#8473A7
-set $red	#B58900
-set $orange	#E59847
-set $cyan	#2AA198
-set $dark 	#00252E
+set $black      #002B36
+set $white      #839496
+set $gray       #CCCCCC
+set $darkgray   #666666
+set $green      #799F26
+set $blue       #4D73AA
+set $purple     #8473A7
+set $red        #B58900
+set $orange     #E59847
+set $cyan       #2AA198
+set $dark       #00252E
 
 # Background colors
-set $bg-color	#073642
+set $bg-color   #073642
 
 # Window spacing
 new_window pixel 2
@@ -168,17 +168,17 @@ new_window pixel 2
 # Setup desk bar
 bar {
         status_command i3blocks -c $HOME/.i3/i3blocks.conf
-      	position top
-      	tray_output eDP1
+        position top
+        tray_output eDP1
         colors {
-                statusline	#999999
-                background	$black
+                statusline  #999999
+                background  $black
 
-                # Colors            	border      	backgr.     	text
-                focused_workspace	$white	 	$white		$black
-                active_workspace	$bg-color 	$bg-color 	#696f89
-                inactive_workspace	$bg-color 	$bg-color     	$white
-                urgent_workspace  	$orange		$orange		$dark
+                # Colors            border      backgr.     text
+                focused_workspace   $white      $white      $black
+                active_workspace    $bg-color   $bg-color   #696f89
+                inactive_workspace  $bg-color   $bg-color   $white
+                urgent_workspace    $orange     $orange     $dark
         }
 }
 
@@ -216,8 +216,8 @@ bindsym $mod+Shift+bracketleft exec dbus-send --print-reply --dest=org.mpris.Med
 #Class                    border  backgr  text    indicator
 client.focused            $white  $white  $dark   $dark
 client.unfocused          $dark   $dark   $white  $white
-client.focused_inactive	  $dark   $dark   $white  $dark
-client.urgent             $orange $orange $dark 	$white
+client.focused_inactive   $dark   $dark   $white  $dark
+client.urgent             $orange $orange $dark   $white
 
 #assign work space
 assign [class="Google-chrome"] $workspace1
