@@ -1,4 +1,6 @@
-BASE_DIR = "$(cd "$(dirname  "$0")" && pwd)"
+#!/bin/bash
+
+BASE_DIR="$(cd "$(dirname  "$0")" && pwd)"
 
 ln -fsv "${BASE_DIR}/.zshrc" "$HOME/.zshrc"
 ln -fsv "${BASE_DIR}/.xinirc" "$HOME/.xinitrc"
