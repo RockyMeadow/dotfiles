@@ -122,3 +122,4 @@ export QT_IM_MODULE=ibus
 
 # Aliases
 alias em="emacs -nw"
+alias ggrep="git grep -n"
