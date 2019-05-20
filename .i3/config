@@ -83,7 +83,7 @@ set $workspace2 "2: "
 set $workspace3 "3: "
 set $workspace4 "4: "
 set $workspace5 "5: "
-set $workspace6 "6: "
+set $workspace6 "6: "
 set $workspace7 "7: "
 set $workspace8 "8: "
 set $workspace9 "9: "
@@ -169,7 +169,7 @@ new_window pixel 2
 bar {
         status_command i3blocks -c $HOME/.i3/i3blocks.conf
         position top
-        tray_output eDP1
+        tray_output HDMI1
         colors {
                 statusline  #999999
                 background  $black
@@ -222,10 +222,10 @@ assign [class="Google-chrome"] $workspace1
 assign [class="URxvt"] $workspace2
 assign [class="Atom"] $workspace3
 assign [class="Firefox"] $workspace4
-assign [class="Thunderbird"] $workspace4
 assign [class="Mattermost"] $workspace5
 assign [class="TelegramDesktop"] $workspace5
 assign [class="robomongo"] $workspace6
+assign [class="Thunderbird"] $workspace6
 assign [class="Steam"] $workspace8
 assign [class="Spotify"] $workspace10
 
