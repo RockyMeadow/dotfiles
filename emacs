@@ -102,7 +102,7 @@
      (sequence "WAITING(w)" "|" "CANCELED(c)"))))
  '(package-selected-packages
    (quote
-    (eglot lsp-mode magit helm-projectile multiple-cursors anzu doom-themes which-key use-package helm)))
+    (js2-mode eglot lsp-mode magit helm-projectile multiple-cursors anzu doom-themes which-key use-package helm)))
  '(read-quoted-char-radix 16)
  '(recentf-mode t)
  '(safe-local-variable-values

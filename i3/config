@@ -221,6 +221,7 @@ client.urgent             $orange $orange $dark   $white
 assign [class="Google-chrome"] $workspace1
 assign [class="URxvt"] $workspace2
 assign [class="Atom"] $workspace3
+assign [class="Code"] $workspace3
 assign [class="Firefox"] $workspace4
 assign [class="Mattermost"] $workspace5
 assign [class="TelegramDesktop"] $workspace5
