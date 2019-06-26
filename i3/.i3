@@ -1,1 +1,0 @@
-/home/dtpham/dots/.i3
