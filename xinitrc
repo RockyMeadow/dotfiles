@@ -7,4 +7,4 @@
 # invoke global X session script
 #. /etc/X11/Xsession
 xrdb $HOME/.Xresources
-exec i3
+exec i3 -c $HOME/.i3/config
