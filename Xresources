@@ -19,18 +19,18 @@ XTerm.vt100.faceName: DejaVu Sans Mono:size=11
 ! URxvt*skipScroll:                     boolean
 ! URxvt*pastableTabs:                   boolean
 ! URxvt*scrollstyle:                    mode
-*scrollBar:                      false
+*scrollBar:                             false
 ! URxvt*scrollBar_right:                boolean
 ! URxvt*scrollBar_floating:             boolean
 ! URxvt*scrollBar_align:                mode
 ! URxvt*thickness:                      number
-URxvt*scrollTtyOutput:           true
-! URxvt*scrollTtyKeypress:              boolean
-! URxvt*scrollWithBuffer:               boolean
+URxvt*scrollTtyOutput:                  false
+URxvt*scrollTtyKeypress:                true
+URxvt*scrollWithBuffer:                 true
 ! URxvt*inheritPixmap:                  boolean
-*transparent:                    false
+*transparent:                           false
 ! URxvt*tintColor:                      color
-*shading:                        1
+*shading:                               1
 ! URxvt*blurRadius:                     HxV
 ! URxvt*fading:                         number
 ! URxvt*fadeColor:                      color
@@ -39,7 +39,7 @@ URxvt*scrollTtyOutput:           true
 ! URxvt*visualBell:                     boolean
 ! URxvt*mapAlert:                       boolean
 ! URxvt*meta8:                          boolean
-!URxvt*mouseWheelScrollPage:           true
+!URxvt*mouseWheelScrollPage:            true
 ! URxvt*tripleclickwords:               boolean
 ! URxvt*insecure:                       boolean
 ! URxvt*cursorUnderline:                boolean
@@ -47,10 +47,10 @@ URxvt*scrollTtyOutput:           true
 ! URxvt*pointerBlank:                   boolean
 ! URxvt.keysym.Control-0x2b: perl:font-size:increase
 ! URxvt.keysym.Control-0x2d: perl:font-size:decrease
-URxvt*background:                     #0e0e0e
-URxvt*foreground:                     #c0b18b
-xterm*background:                     #1f1f1f
-xterm*foreground:                     #c0b18b
+URxvt*background:                       #0e0e0e
+URxvt*foreground:                       #c0b18b
+xterm*background:                       #1f1f1f
+xterm*foreground:                       #c0b18b
 
 !black
 *color0:                         #2E3436
@@ -101,8 +101,8 @@ xterm*foreground:                     #c0b18b
 ! URxvt*path:                           search path
 ! URxvt*backgroundPixmap:               file[;geom]
 ! URxvt*iconFile:                       file
-!URxvt*font:                           xft:Inconsolata:style=Medium:pixelsize=14
-!URxvt*font:                           xft:Mono:pixelsize=13
+!URxvt*font:                            xft:Inconsolata:style=Medium:pixelsize=14
+!URxvt*font:                            xft:Mono:pixelsize=13
 ! URxvt*boldFont:                       fontname
 ! URxvt*italicFont:                     fontname
 ! URxvt*boldItalicFont:                 fontname
@@ -111,11 +111,11 @@ xterm*foreground:                     #c0b18b
 ! URxvt*preeditType:                    style
 ! URxvt*imLocale:                       string
 ! URxvt*imFont:                         fontname
-!URxvt*title:                          URxvt
+! URxvt*title:                           URxvt
 ! URxvt*iconName:                       string
-!URxvt*saveLines:                      1024
+! URxvt*saveLines:                       1024
 ! URxvt*buffered:                       boolean
-URxvt*depth:                         32
+URxvt*depth:                            32
 ! URxvt*visual:                         number
 ! URxvt*transient-for:                  windowid
 ! URxvt*override-redirect:              boolean
@@ -135,15 +135,15 @@ URxvt*depth:                         32
 ! URxvt*answerbackString:               string
 ! URxvt*secondaryScreen:                boolean
 ! URxvt*secondaryScroll:                boolean
-URxvt*perl-lib:                       /usr/lib/urxvt/perl/
+URxvt*perl-lib:                         /usr/lib/urxvt/perl/
 ! URxvt*perl-eval:                      perl-eval
-URxvt*perl-ext-common:               default,matcher,selection-to-clipboard
+URxvt*perl-ext-common:                  default,matcher,selection-to-clipboard
 ! URxvt*perl-ext:                       string
 ! URxvt*iso14755:                       boolean
 ! URxvt*iso14755_52:                    boolean
 ! URxvt*xrm:                            string
-! URxvt*keysym.Control-Shift-Up:      perl:font-size:increment
-! URxvt*keysym.Control-Shift-Down:    perl:font-size:decrement
+! URxvt*keysym.Control-Shift-Up:        perl:font-size:increment
+! URxvt*keysym.Control-Shift-Down:      perl:font-size:decrement
 ! URxvt*keysym.sym:                     keysym
 ! URxvt*background.border:              boolean
 ! URxvt*background.expr:                string
@@ -165,7 +165,7 @@ URxvt*perl-ext-common:               default,matcher,selection-to-clipboard
 ! URxvt*tab-fg:                         colour
 ! URxvt*tabbar-bg:                      colour
 ! URxvt*tabbar-fg:                      colour
-URxvt*url-launcher:                   /usr/bin/x-www-browser
+URxvt*url-launcher:                     /usr/bin/x-www-browser
 !URxvt.keysym.Shift-Up: command:\033]720;1\007
 !URxvt.keysym.Shift-Down: command:\033]721;1\007
 ! Compile xft: Attempt to find a visual with the given bit depth; option -depth.
