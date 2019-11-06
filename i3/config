@@ -169,7 +169,7 @@ new_window pixel 2
 bar {
         status_command i3blocks -c $HOME/.i3/i3blocks.conf
         position top
-        tray_output HDMI1
+        tray_output eDP1
         colors {
                 statusline  #999999
                 background  $black
@@ -225,10 +225,10 @@ assign [class="Code"] $workspace3
 assign [class="Firefox"] $workspace4
 assign [class="Mattermost"] $workspace5
 assign [class="TelegramDesktop"] $workspace5
+assign [class="discord"] $workspace5
 assign [class="robomongo"] $workspace6
 assign [class="Thunderbird"] $workspace6
 assign [class="Steam"] $workspace8
-assign [class="Spotify"] $workspace10
 
 #startup
 exec --no-startup-id ~/.i3/bin/xinput-fix.sh
