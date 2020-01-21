@@ -222,12 +222,13 @@ assign [class="Google-chrome"] $workspace1
 assign [class="URxvt"] $workspace2
 assign [class="Atom"] $workspace3
 assign [class="Code"] $workspace3
+assign [class="jetbrains-idea-ce"] $workspace3
 assign [class="Firefox"] $workspace4
 assign [class="Mattermost"] $workspace5
 assign [class="TelegramDesktop"] $workspace5
 assign [class="discord"] $workspace5
 assign [class="robomongo"] $workspace6
-assign [class="Thunderbird"] $workspace6
+assign [class="thunderbird"] $workspace6
 assign [class="Steam"] $workspace8
 
 #startup
