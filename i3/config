@@ -117,8 +117,19 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 bindsym $mod+Shift+c reload
 # Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# Exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -f 'System San Francisco Display' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# Exit commands
+# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -f 'System San Francisco Display' -b 'Yes, exit i3' 'i3-msg exit'"
+mode "(s)leep (h)ybernate (r)eboot (p)oweroff (e)xit-i3" {
+        bindsym s exec ~/.i3/bin/lockscreen.sh && systemctl suspend; mode "default"
+        bindsym h exec ~/.i3/bin/lockscreen.sh && systemctl hibernate; mode "default"
+        bindsym p exec systemctl poweroff; mode "default"
+        bindsym r exec systemctl reboot; mode "default"
+        bindsym e exec --no-startup-id i3-msg exit; mode "default"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindsym $mod+Shift+e mode "(s)leep (h)ybernate (r)eboot (p)oweroff (e)xit-i3"
 
 # Resize window (you can also use the mouse for that)
 mode "resize" {
