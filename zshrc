@@ -103,7 +103,6 @@ fpath=(~/.zsh/completion $fpath)
 
 autoload -Uz compinit && compinit -i
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ ! "$SSH_AUTH_SOCK" ] && export SSH_AUTH_SOCK="$HOME/.ssh/ssh_auth_sock"
 
 ####
@@ -114,11 +113,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Using ibus for desktop applications
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
-
 # Aliases
 alias em="emacs -nw"
 alias ggrep="git grep -n"
+
+source /usr/share/doc/fzf/examples/key-bindings.zsh

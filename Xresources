@@ -8,7 +8,7 @@ Xft.hintstyle:	hintfull
 
 URxvt.font: xft:DejaVu Sans Mono-11
 Emacs.font: DejaVu Sans Mono-11
-XTerm.vt100.faceName: DejaVu Sans Mono:size=11
+XTerm.vt100.faceName: DejaVu Sans Mono:size=20
 
 ! URxvt*termName:                       string
 ! URxvt*geometry:                       geometry
@@ -101,8 +101,8 @@ xterm*foreground:                       #c0b18b
 ! URxvt*path:                           search path
 ! URxvt*backgroundPixmap:               file[;geom]
 ! URxvt*iconFile:                       file
-!URxvt*font:                            xft:Inconsolata:style=Medium:pixelsize=14
-!URxvt*font:                            xft:Mono:pixelsize=13
+!URxvt*font:                            xft:Inconsolata:style=Medium:pixelsize=20
+!URxvt*font:                            xft:Mono:pixelsize=20
 ! URxvt*boldFont:                       fontname
 ! URxvt*italicFont:                     fontname
 ! URxvt*boldItalicFont:                 fontname

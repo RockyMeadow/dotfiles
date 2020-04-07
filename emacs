@@ -115,7 +115,7 @@
  '(tab-stop-list (quote (4 8 12 16 20 24 28 32 36)))
  '(tab-width 4)
  '(tool-bar-mode nil)
- '(tramp-auto-save-directory "~/.emacs.d/backup")
+ '(tramp-auto-save-directory "~/.emacs.d/backup" nil (tramp))
  '(version-control t)
  '(whitespace-style (quote (tabs empty indentation big-indent tab-mark))))
 (custom-set-faces
