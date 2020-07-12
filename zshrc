@@ -116,5 +116,3 @@ export NVM_DIR="$HOME/.nvm"
 # Aliases
 alias em="emacs -nw"
 alias ggrep="git grep -n"
-
-source /usr/share/doc/fzf/examples/key-bindings.zsh
