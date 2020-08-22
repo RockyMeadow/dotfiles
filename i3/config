@@ -242,6 +242,7 @@ assign [class="Google-chrome"] $workspace1
 assign [class="URxvt"] $workspace2
 assign [class="Atom"] $workspace3
 assign [class="Code"] $workspace3
+assign [class="code-oss"] $workspace3
 assign [class="jetbrains-idea-ce"] $workspace3
 assign [class="Firefox"] $workspace4
 assign [class="firefox"] $workspace4
