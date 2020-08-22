@@ -253,7 +253,8 @@ assign [class="thunderbird"] $workspace6
 assign [class="Steam"] $workspace8
 
 #startup
-exec --no-startup-id ~/.i3/bin/xinput-fix.sh
+#exec --no-startup-id ~/.i3/bin/xinput-fix.sh
+exec --no-startup-id feh --bg-center -z ~/Pictures/wallpapers
 exec --no-startup-id firefox
 exec --no-startup-id i3-sensible-terminal
 exec --no-startup-id ibus-daemon -r -d
