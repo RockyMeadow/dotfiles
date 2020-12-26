@@ -1,4 +1,4 @@
-# RockyMeadow's i3 config file (v4)
+# RockyMeadow's i3 config file
 # Reference: http://i3wm.org/docs/userguide.html
 
 set $mod Mod4
@@ -69,10 +69,36 @@ bindsym $mod+a focus parent
 bindsym $mod+minus scratchpad show
 bindsym $mod+Shift+minus move scratchpad
 
-# Open specific applications in floating mode
+######################
+## Programs section ##
+######################
+# Float on openning
 for_window [class="Gtk-recordmydesktop"] floating enable border pixel 2
 for_window [class="Pavucontrol"] floating enable  border pixel 2
 for_window [class="Wicd-client.py"] floating enable  border pixel 2
+for_window [title="alsamixer"] floating enable border pixel 2
+for_window [class="GParted"] floating enable border normal
+for_window [class="Manjaro-hello"] floating enable
+for_window [class="Manjaro Settings Manager"] floating enable border normal
+for_window [class="Pamac-manager"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Spotify"] floating enable
+
+# Workspace assign
+assign [class="Google-chrome"] $workspace1
+assign [class="URxvt"] $workspace2
+assign [class="Atom"] $workspace3
+assign [class="Code"] $workspace3
+assign [class="code-oss"] $workspace3
+assign [class="jetbrains-idea-ce"] $workspace3
+assign [class="(?i)firefox"] $workspace4
+assign [class="Mattermost"] $workspace5
+assign [class="TelegramDesktop"] $workspace5
+assign [class="discord"] $workspace5
+assign [class="robomongo"] $workspace6
+assign [class="thunderbird"] $workspace6
+assign [class="Steam"] $workspace8
+assign [class="Spotify"] $workspace10
 
 # Workspace names
 set $workspace1 "1: "
@@ -85,6 +111,8 @@ set $workspace7 "7: "
 set $workspace8 "8: "
 set $workspace9 "9: "
 set $workspace10 "10: "
+
+######################
 
 # Switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -184,7 +212,9 @@ bar {
         }
 }
 
-# Sound section
+###################
+## Sound section ##
+###################
 
 exec --no-startup-id volumeicon
 bindsym $mod+Shift+m exec pavucontrol
@@ -193,6 +223,8 @@ bindsym XF86AudioLowerVolume exec amixer sset Master 5%- && pkill -SIGRTMIN+10 i
 bindsym $mod+XF86AudioRaiseVolume exec amixer sset Master 1%+ && pkill -SIGRTMIN+10 i3blocks
 bindsym $mod+XF86AudioLowerVolume exec amixer sset Master 1%- && pkill -SIGRTMIN+10 i3blocks
 bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks
+
+###################
 
 # Toggle touchpad
 #bindsym XF86TouchpadToggle exec /home/rockymeadow/.i3/bin/toggletouchpad.sh
@@ -221,22 +253,6 @@ client.focused            $white  $white  $dark   $dark
 client.unfocused          $dark   $dark   $white  $white
 client.focused_inactive   $dark   $dark   $white  $dark
 client.urgent             $orange $orange $dark   $white
-
-# Assign work space
-assign [class="Google-chrome"] $workspace1
-assign [class="URxvt"] $workspace2
-assign [class="Atom"] $workspace3
-assign [class="Code"] $workspace3
-assign [class="code-oss"] $workspace3
-assign [class="jetbrains-idea-ce"] $workspace3
-assign [class="Firefox"] $workspace4
-assign [class="firefox"] $workspace4
-assign [class="Mattermost"] $workspace5
-assign [class="TelegramDesktop"] $workspace5
-assign [class="discord"] $workspace5
-assign [class="robomongo"] $workspace6
-assign [class="thunderbird"] $workspace6
-assign [class="Steam"] $workspace8
 
 # Startup programs
 exec --no-startup-id feh --bg-center -z ~/Pictures/wallpapers
