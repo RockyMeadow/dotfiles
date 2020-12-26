@@ -69,51 +69,6 @@ bindsym $mod+a focus parent
 bindsym $mod+minus scratchpad show
 bindsym $mod+Shift+minus move scratchpad
 
-######################
-## Programs section ##
-######################
-# Float on openning
-for_window [class="Gtk-recordmydesktop"] floating enable border pixel 2
-for_window [class="Pavucontrol"] floating enable  border pixel 2
-for_window [class="Wicd-client.py"] floating enable  border pixel 2
-for_window [title="alsamixer"] floating enable border pixel 2
-for_window [class="GParted"] floating enable border normal
-for_window [class="Manjaro-hello"] floating enable
-for_window [class="Manjaro Settings Manager"] floating enable border normal
-for_window [class="Pamac-manager"] floating enable
-for_window [class="Pavucontrol"] floating enable
-for_window [class="Spotify"] floating enable
-
-# Workspace assign
-assign [class="Google-chrome"] $workspace1
-assign [class="URxvt"] $workspace2
-assign [class="Atom"] $workspace3
-assign [class="Code"] $workspace3
-assign [class="code-oss"] $workspace3
-assign [class="jetbrains-idea-ce"] $workspace3
-assign [class="(?i)firefox"] $workspace4
-assign [class="Mattermost"] $workspace5
-assign [class="TelegramDesktop"] $workspace5
-assign [class="discord"] $workspace5
-assign [class="robomongo"] $workspace6
-assign [class="thunderbird"] $workspace6
-assign [class="Steam"] $workspace8
-assign [class="Spotify"] $workspace10
-
-# Workspace names
-set $workspace1 "1: "
-set $workspace2 "2: "
-set $workspace3 "3: "
-set $workspace4 "4: "
-set $workspace5 "5: "
-set $workspace6 "6: "
-set $workspace7 "7: "
-set $workspace8 "8: "
-set $workspace9 "9: "
-set $workspace10 "10: "
-
-######################
-
 # Switch to workspace
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
@@ -254,7 +209,51 @@ client.unfocused          $dark   $dark   $white  $white
 client.focused_inactive   $dark   $dark   $white  $dark
 client.urgent             $orange $orange $dark   $white
 
+######################
+## Programs section ##
+######################
+# Float on openning
+for_window [class="Gtk-recordmydesktop"] floating enable border pixel 2
+for_window [class="Pavucontrol"] floating enable  border pixel 2
+for_window [class="Wicd-client.py"] floating enable  border pixel 2
+for_window [title="alsamixer"] floating enable border pixel 2
+for_window [class="GParted"] floating enable border normal
+for_window [class="Manjaro-hello"] floating enable
+for_window [class="Manjaro Settings Manager"] floating enable border normal
+for_window [class="Pamac-manager"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Spotify"] floating enable
+
+# Workspace assign
+assign [class="Google-chrome"] $workspace1
+assign [class="URxvt"] $workspace2
+assign [class="Atom"] $workspace3
+assign [class="Code"] $workspace3
+assign [class="code-oss"] $workspace3
+assign [class="jetbrains-idea-ce"] $workspace3
+assign [class="(?i)firefox"] $workspace4
+assign [class="Mattermost"] $workspace5
+assign [class="TelegramDesktop"] $workspace5
+assign [class="discord"] $workspace5
+assign [class="robomongo"] $workspace6
+assign [class="thunderbird"] $workspace6
+assign [class="Steam"] $workspace8
+assign [class="Spotify"] $workspace10
+
+# Workspace names
+set $workspace1 "1: "
+set $workspace2 "2: "
+set $workspace3 "3: "
+set $workspace4 "4: "
+set $workspace5 "5: "
+set $workspace6 "6: "
+set $workspace7 "7: "
+set $workspace8 "8: "
+set $workspace9 "9: "
+set $workspace10 "10: "
+
 # Startup programs
+exec --no-startup-id xfce4-power-manager
 exec --no-startup-id feh --bg-center -z ~/Pictures/wallpapers
 exec --no-startup-id firefox
 exec --no-startup-id i3-sensible-terminal
@@ -263,3 +262,5 @@ exec --no-startup-id mattermost-desktop
 exec --no-startup-id redshift
 exec --no-startup-id dunst
 exec --no-startup-id nm-applet
+
+######################
