@@ -8,9 +8,9 @@
 #. /etc/X11/Xsession
 
 #Ibus fix
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
 
 xrdb $HOME/.Xresources
 exec i3 -c $HOME/.i3/config
