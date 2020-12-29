@@ -1,10 +1,9 @@
 ## My personal dotfiles
 
 Stack:
- - TerminalL **Urxvt**
- - window manager: **i3wm**
- - shell:          **zsh**
- - editor:         **emacs**
+ - Terminal: **Urxvt**
+ - Window manager: **i3wm**
+ - Shell: **zsh**
 
 ## Dependencies
 - [i3blocks-contrib](https://github.com/vivien/i3blocks-contrib)
