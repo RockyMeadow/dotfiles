@@ -104,8 +104,8 @@ bindsym $mod+Shift+e mode "$system_commands"
 set $system_commands (s)leep (h)ybernate (r)eboot (p)oweroff (e)xit-i3
 
 mode "$system_commands" {
-        bindsym s exec ~/.i3/bin/lockscreen.sh && systemctl suspend; mode "default"
-        bindsym h exec ~/.i3/bin/lockscreen.sh && systemctl hibernate; mode "default"
+        bindsym s exec blurblock && systemctl suspend; mode "default"
+        bindsym h exec blurblock && systemctl hibernate; mode "default"
         bindsym p exec systemctl poweroff; mode "default"
         bindsym r exec systemctl reboot; mode "default"
         bindsym e exec --no-startup-id i3-msg exit; mode "default"
@@ -182,11 +182,11 @@ bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks
 ###################
 
 # Toggle touchpad
-#bindsym XF86TouchpadToggle exec /home/rockymeadow/.i3/bin/toggletouchpad.sh
+#bindsym XF86TouchpadToggle exec toggletouchpad
 
 # Lock screen
 #bindsym $mod+Escape exec i3lock -u -c "$bg-color"
-bindsym $mod+Escape exec ~/.i3/bin/lockscreen.sh
+bindsym $mod+Escape exec blurblock
 
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
