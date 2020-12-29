@@ -1,0 +1,27 @@
+#!/bin/bash
+# Borrow rom txgvv :)
+
+if [ "${DEBUG:-0}" -eq 1 ]; then
+  set -x
+fi
+
+if ! type ssh-add > /dev/null; then
+  exit 1
+fi
+
+if [ -z "$(ssh-add -l 2> /dev/null)" ]; then
+  eval "$(ssh-agent)"
+  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+fi
+
+if ssh-add -l > /dev/null; then
+  exit 0
+fi
+
+printf 'Use ssh/gpg agent? (Y/n): '
+
+read -r agree
+
+if [[ "$agree" = 'Y' || "$agree" = 'y' || -z "$agree" ]]; then
+  ssh-add
+fi
