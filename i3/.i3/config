@@ -154,7 +154,7 @@ new_window pixel 2
 bar {
         status_command i3blocks -c $HOME/.i3/i3blocks.conf
         position top
-        tray_output eDP1
+        tray_output primary
         colors {
                 statusline  #999999
                 background  $black
@@ -222,7 +222,8 @@ for_window [class="Manjaro-hello"] floating enable
 for_window [class="Manjaro Settings Manager"] floating enable border normal
 for_window [class="Pamac-manager"] floating enable
 for_window [class="Pavucontrol"] floating enable
-for_window [class="Spotify"] floating enable
+for_window [class="(?i)spotify"] floating enable
+for_window [class="keepassxc"] floating enable
 
 # Workspace assign
 assign [class="Google-chrome"] $workspace1
@@ -231,6 +232,7 @@ assign [class="Atom"] $workspace3
 assign [class="Code"] $workspace3
 assign [class="code-oss"] $workspace3
 assign [class="jetbrains-idea-ce"] $workspace3
+assign [class="(?i)codium"] $workspace3
 assign [class="(?i)firefox"] $workspace4
 assign [class="Mattermost"] $workspace5
 assign [class="TelegramDesktop"] $workspace5
