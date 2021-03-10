@@ -223,7 +223,8 @@ for_window [class="Manjaro Settings Manager"] floating enable border normal
 for_window [class="Pamac-manager"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="(?i)spotify"] floating enable
-for_window [class="keepassxc"] floating enable
+for_window [class="(?i)keepassxc"] floating enable
+for_window [class="(?i)chromium" window_role="pop-up"] floating enable resize set 640 860
 
 # Workspace assign
 assign [class="Google-chrome"] $workspace1
@@ -255,8 +256,8 @@ set $workspace9 "9: "
 set $workspace10 "10: "
 
 # Startup programs
+exec_always --no-startup-id feh --bg-fill -z ~/Pictures/wallpapers
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id feh --bg-center -z ~/Pictures/wallpapers
 exec --no-startup-id firefox
 exec --no-startup-id i3-sensible-terminal
 exec --no-startup-id ibus-daemon -r -d
