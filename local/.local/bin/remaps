@@ -4,3 +4,5 @@
 # Map the weird < key to Super 
 xmodmap -e 'keycode 94 = Super_L'
 
+# Enable scrolling by middle mouse button for Thinkpad Keyboard
+xinput set-prop 'Lite-On Tech Lenovo USB Travel Keyboard with Ultra Nav Mouse' 'libinput Scroll Method Enabled' {0,0,1}
