@@ -238,6 +238,7 @@ assign [class="(?i)firefox"] $workspace4
 assign [class="Mattermost"] $workspace5
 assign [class="TelegramDesktop"] $workspace5
 assign [class="discord"] $workspace5
+assign [class="(?i)signal"] $workspace5
 assign [class="robomongo"] $workspace6
 assign [class="thunderbird"] $workspace6
 assign [class="Steam"] $workspace8
