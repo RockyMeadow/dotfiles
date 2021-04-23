@@ -14,5 +14,8 @@ export QT4_IM_MODULE=ibus
 export XMODIFIERS="@im=ibus"
 ibus-daemon -drx
 
-xrdb $HOME/.Xresources
+
+xrdb -merge ~/.Xresources
+[ -f ~/.xprofile ] && . ~/.xprofile
+
 exec i3 -c $HOME/.i3/config

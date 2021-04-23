@@ -6,7 +6,8 @@ thinkpad_keyboard=$(xinput list --id-only 'Lite-On Tech Lenovo USB Travel Keyboa
 
 if [ -n "$thinkpad_keyboard" ]; then
   # Map the weird < key to Super
-  xmodmap -e 'keycode 94 = Super_L'
+  xmodmap -e 'clear lock'
+  xmodmap -e 'keycode 66 = Super_L NoSymbol Caps_Lock NoSymbol'
 
   # Enable scrolling by middle mouse button for Thinkpad Keyboard
   xinput set-prop $thinkpad_keyboard 'libinput Scroll Method Enabled' 0, 0, 1
