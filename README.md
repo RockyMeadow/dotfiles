@@ -7,6 +7,11 @@ Stack:
 
 ## Dependencies
 - [i3blocks-contrib](https://github.com/vivien/i3blocks-contrib)
+- pavucontrol
+- imagemagick
+- xbacklight
+- dunst
+
 ## Deploy using stow
 ``` shell
   stow -t $HOME <package-name>
