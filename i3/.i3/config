@@ -189,8 +189,8 @@ bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks
 bindsym $mod+Escape exec blurblock
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 5"
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 5"
 
 # Move workspace around monitors
 bindsym $mod+Shift+comma move workspace to output left
@@ -263,7 +263,7 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id firefox
 exec --no-startup-id i3-sensible-terminal
 exec --no-startup-id ibus-daemon -rdv
-exec --no-startup-id mattermost-desktop
+exec --no-startup-id discord
 exec --no-startup-id redshift
 exec --no-startup-id dunst
 exec --no-startup-id nm-applet
