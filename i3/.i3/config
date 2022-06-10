@@ -268,5 +268,6 @@ exec --no-startup-id redshift
 exec --no-startup-id dunst
 exec --no-startup-id nm-applet
 exec --no-statrup-id remaps
+exec --no-startup-id emacs
 
 ######################
