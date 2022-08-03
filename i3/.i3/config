@@ -233,6 +233,7 @@ assign [class="URxvt"] $workspace2
 assign [class="Atom"] $workspace3
 assign [class="Code"] $workspace3
 assign [class="code-oss"] $workspace3
+assign [class="(?i)emacs"] $workspace3
 assign [class="jetbrains-idea-ce"] $workspace3
 assign [class="(?i)codium"] $workspace3
 assign [class="(?i)firefox"] $workspace4
@@ -269,5 +270,7 @@ exec --no-startup-id dunst
 exec --no-startup-id nm-applet
 exec --no-statrup-id remaps
 exec --no-startup-id emacs
+exec --no-startup-id thunderbird
+exec --no-startup-id signal-desktop
 
 ######################
