@@ -74,6 +74,14 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented
+;;
+(use-package! org-download
+  :after org
+  :bind
+  (:map org-mode-map
+        (("s-Y" . org-download-screenshot)
+         ("s-y" . org-download-yank))))
+
 (use-package! org-roam
   :init
    (map! :leader
@@ -95,6 +103,10 @@
      ("p" "project" plain
        "* Owner\n%?\n* * Tasks\n** TODO Initial task"
        :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n#+filetags: Project\n")
+       :unnarrowed t)
+     ("t" "topic" plain
+      "* Tags\n- %?"
+       :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n#+filetags: Topic\n")
        :unnarrowed t)
     ))
    :config
