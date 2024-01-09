@@ -101,11 +101,11 @@
        :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
        :unnarrowed t)
      ("p" "project" plain
-       "* Owner\n%?\n* * Tasks\n** TODO Initial task"
+       "* Owner\n- %?\n\n* Links\n- \n- \n"
        :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n#+filetags: Project\n")
        :unnarrowed t)
      ("t" "topic" plain
-      "* Tags\n- %?"
+      "* Tags\n-\n\n* %?"
        :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n#+filetags: Topic\n")
        :unnarrowed t)
     ))
