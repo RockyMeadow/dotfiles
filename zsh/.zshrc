@@ -1,7 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="af-magic"
-plugins=(git debian docker docker-compose)
+plugins=(git debian docker direnv)
 
 source $ZSH/oh-my-zsh.sh
 

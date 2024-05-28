@@ -2,7 +2,7 @@
 
 # This script is called on startup to remap keys.
 
-thinkpad_keyboard=$(xinput list --id-only 'Lite-On Tech Lenovo USB Travel Keyboard with Ultra Nav Mouse')
+thinkpad_keyboard=$(xinput list --id-only 'Lite-On Tech Lenovo USB Travel Keyboard with Ultra Nav Mouse') || false
 
 if [ -n "$thinkpad_keyboard" ]; then
   # Map the weird < key to Super
