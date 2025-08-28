@@ -108,6 +108,10 @@
       "* Tags\n-\n\n* References\n%?"
        :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n#+filetags: Topic\n")
        :unnarrowed t)
+     ("l" "link" plain
+      "* Tags\n-\n\n* Link\n- %?"
+       :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n#+filetags: Link\n")
+       :unnarrowed t)
     ))
    :config
    (org-roam-db-autosync-mode))
