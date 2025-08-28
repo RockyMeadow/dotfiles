@@ -17,4 +17,4 @@ Stack:
   stow -t $HOME <package-name>
 ```
 
-A personal thank you to [txgvnn](https://github.com/txgvnn/) for inspiration and being a great help.
+A personal thank you to [@txgvnn](https://github.com/txgvnn) for inspiration and being a great help.
